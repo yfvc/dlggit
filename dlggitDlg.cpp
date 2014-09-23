@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "dlggit.h"
 #include "dlggitDlg.h"
+#include "CreateDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -82,6 +83,7 @@ BEGIN_MESSAGE_MAP(CDlggitDlg, CDialog)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_CREATE, OnCreate)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -167,4 +169,30 @@ void CDlggitDlg::OnPaint()
 HCURSOR CDlggitDlg::OnQueryDragIcon()
 {
 	return (HCURSOR) m_hIcon;
+}
+
+void CDlggitDlg::OnOK() 
+{
+	// TODO: Add extra validation here
+	
+//	CDialog::OnOK();
+}
+
+void CDlggitDlg::OnCancel() 
+{
+	// TODO: Add extra cleanup here
+	
+	CDialog::OnCancel();
+}
+
+void CDlggitDlg::OnCreate() 
+{
+	// TODO: Add your control notification handler code here
+	CCreateDlg dlgCreate;
+
+	if( dlgCreate.DoModal() == IDOK )
+	{
+		// TODO
+	}
+	
 }
