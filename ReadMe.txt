@@ -17,7 +17,7 @@ dlggit.dsp
 
 dlggit.h
     This is the main header file for the application.  It includes other
-    project specific headers (including Resource.h) and declares the
+    project specific headers (including resource.h) and declares the
     CDlggitApp application class.
 
 dlggit.cpp
@@ -66,7 +66,7 @@ StdAfx.h, StdAfx.cpp
     These files are used to build a precompiled header (PCH) file
     named dlggit.pch and a precompiled types file named StdAfx.obj.
 
-Resource.h
+resource.h
     This is the standard header file, which defines new resource IDs.
     Microsoft Visual C++ reads and updates this file.
 

@@ -92,6 +92,10 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
+SOURCE=.\CloneDlg.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\CreateDlg.cpp
 # End Source File
 # Begin Source File
@@ -117,6 +121,10 @@ SOURCE=.\StdAfx.cpp
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
+SOURCE=.\CloneDlg.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\CreateDlg.h
 # End Source File
 # Begin Source File
@@ -129,7 +137,7 @@ SOURCE=.\dlggitDlg.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\Resource.h
+SOURCE=.\resource.h
 # End Source File
 # Begin Source File
 
