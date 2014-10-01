@@ -192,7 +192,13 @@ void CDlggitDlg::OnCreate()
 
 	if( dlgCreate.DoModal() == IDOK )
 	{
-		// TODO
+		git_repository* repo = NULL;
+		int iRetVal = git_repository_init(&repo, (LPCTSTR)dlgCreate.m_strPathName, false);	// true: 裸库，生成的是库目录；false: 生成的是.git管理目录
+
+		if( (iRetVal < 0) && (giterr_last() != NULL) )
+		{
+			MessageBox(giterr_last()->message);
+		}
 	}
 	
 }

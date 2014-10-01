@@ -43,6 +43,8 @@ BOOL CDlggitApp::InitInstance()
 {
 	AfxEnableControlContainer();
 
+	git_threads_init();
+
 	// Standard initialization
 	// If you are not using these features and wish to reduce the size
 	//  of your final executable, you should remove from the following
@@ -71,4 +73,12 @@ BOOL CDlggitApp::InitInstance()
 	// Since the dialog has been closed, return FALSE so that we exit the
 	//  application, rather than start the application's message pump.
 	return FALSE;
+}
+
+int CDlggitApp::ExitInstance() 
+{
+	// TODO: Add your specialized code here and/or call the base class
+	git_threads_shutdown();
+	
+	return CWinApp::ExitInstance();
 }
