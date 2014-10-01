@@ -5,6 +5,7 @@
 #include "dlggit.h"
 #include "dlggitDlg.h"
 #include "CreateDlg.h"
+#include "CloneDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -84,6 +85,7 @@ BEGIN_MESSAGE_MAP(CDlggitDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_CREATE, OnCreate)
+	ON_BN_CLICKED(IDC_CLONE, OnClone)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -199,6 +201,18 @@ void CDlggitDlg::OnCreate()
 		{
 			MessageBox(giterr_last()->message);
 		}
+	}
+	
+}
+
+void CDlggitDlg::OnClone() 
+{
+	// TODO: Add your control notification handler code here
+	CCloneDlg dlgClone;
+
+	if( dlgClone.DoModal() == IDOK )
+	{
+		// TODO:
 	}
 	
 }
