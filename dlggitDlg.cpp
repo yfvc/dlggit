@@ -201,6 +201,8 @@ void CDlggitDlg::OnCreate()
 		{
 			MessageBox(giterr_last()->message);
 		}
+		if( repo != NULL )
+			git_repository_free(repo);
 	}
 	
 }
@@ -212,7 +214,18 @@ void CDlggitDlg::OnClone()
 
 	if( dlgClone.DoModal() == IDOK )
 	{
-		// TODO:
+		git_repository* repo = NULL;
+		git_clone_options opts = GIT_CLONE_OPTIONS_INIT;
+		int iRetVal;
+
+		opts.bare = true;
+		iRetVal = git_clone(&repo, dlgClone.m_strSrcPathName, dlgClone.m_strDestPathName, &opts);
+		if( (iRetVal < 0) && (giterr_last() != NULL) )
+		{
+			MessageBox(giterr_last()->message);
+		}
+		if( repo != NULL )
+			git_repository_free(repo);
 	}
 	
 }

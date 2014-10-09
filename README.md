@@ -1,1 +1,1 @@
-项目在 http://bbs.yfvc.com/viewtopic.php?f=6 进行讨论，欢迎参与！
+项目在 http://bbs.yfvc.com/viewforum.php?f=6 进行讨论，欢迎参与！
